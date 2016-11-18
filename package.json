@@ -1,0 +1,29 @@
+{
+  "name": "webpack-example-workflow",
+  "version": "1.0.0",
+  "description": "Simple workflow for webpack with scss/pug/js/vue integration.",
+  "repository": {
+    "url": "https://github.com/varbrad/webpack-example-workflow",
+    "type": "git"
+  },
+  "author": "Brad Davies <varbrad@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -p",
+    "dev-server": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.0",
+    "html-webpack-plugin": "^2.24.1",
+    "node-sass": "^3.13.0",
+    "pug": "^2.0.0-beta6",
+    "pug-loader": "^2.3.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "vue": "^2.0.7"
+  }
+}
