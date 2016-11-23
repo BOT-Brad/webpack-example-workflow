@@ -3,6 +3,7 @@ Simple workflow for webpack with scss/pug/js/vue integration.
 
 ### JS
 All modules are packaged into single bundle.
+Supports ES2015 javascript features using Babel transpilation.
 
 ### Pug
 Compiled to HTML and automatically has the generated JS bundle injected at the end of the body.
