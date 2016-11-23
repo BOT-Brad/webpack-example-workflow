@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: ['babel-polyfill', './src/main.js'],
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
@@ -11,6 +11,13 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node-modules/,
+        query: {
+          presets: ['es2015']
+        }
+      }, {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass']
       }, {
@@ -30,5 +37,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.js'
     }
+  },
+  devServer: {
+    inline: true
   }
 }
