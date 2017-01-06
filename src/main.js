@@ -1,11 +1,21 @@
 (function () {
+  //
   require('./css/style.scss')
 
-  var mult = (a, b) => {
-    return a * b
-  }
+  const Vue = require('vue');
 
-  console.log(mult(37, 41))
+  var app = new Vue({
+    data: {
+      message: 'Hello'
+    },
+    methods: {
 
-  console.log('yay! :D')
+    },
+    mounted: function () {
+      
+    }
+  })
+
+  app.$mount('#app');
+  //
 })()

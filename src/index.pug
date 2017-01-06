@@ -4,4 +4,5 @@ html(lang="en")
     meta(charset="utf-8")
   body
     #app
-      h1 Hello, world!
+      p {{ message }}
+      input(v-model="message")
